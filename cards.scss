@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card-wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #DA4453;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.card {
+    background: #fff;
+    width: 270px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 8px 8px #303030;
+    margin: 0 8px;
+    border: 1px solid #eaeaea;
+}
+
+.card-top {
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.card-top-holder {
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count {
+    font-size: 35px;
+    font-family: Cambria;
+}
+
+.red {
+    color: #ff0000;
+}
+
+.card-center {
+    display: flex;
+    /* background: green; */
+    justify-content: center;
+}
+
+.card-bottom {
+    display: flex;
+    /* background: blue; */
+    flex-direction: column;
+    align-items: end;
+}
+
+.card-bottom-holder {
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(180deg);
+}
+
+.logo {
+    img {
+        width: 40px;
+    }
+}
+
+/* ===== ABSOLUTE ===== */
+
+.absolute {
+    .card {
+        position: absolute;
+        transition: transform 1s linear;
+        transform-origin: bottom left;
+        transform-style: preserve-3D;
+    }
+
+    &:hover {
+        .card:nth-of-type(1) {
+            transform: rotate(-12deg);
+        }
+        .card:nth-of-type(2) {
+            transform: rotate(-4deg);
+        }
+        .card:nth-of-type(3) {
+            transform: rotate(4deg);
+        }
+        .card:nth-of-type(4) {
+            transform: rotate(12deg);
+        }
+    }
+}
